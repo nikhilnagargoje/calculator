@@ -1,0 +1,96 @@
+body {
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-size: 400% 400%;
+  animation: gradientAnimation 12s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+.calculator {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  width: 300px;
+}
+
+#display {
+  width: 93%;
+  height: 50px;
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  background: #eaeaea;
+  border-radius: 6px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #d4d4d4;
+}
+
+.equal {
+  grid-column: span 2;
+  background-color: #4caf50;
+  color: white;
+}
+
+.equal:hover {
+  background-color: #45a049;
+}
+
+button {
+  transition: all 0.1s ease;
+}
+
+.delete-btn:active {
+  transform: scale(1) rotate(-2deg);
+  background-color: rgb(253, 76, 53);
+  box-shadow: 0 0 8px rgba(88, 183, 255, 0.937);
+  color: white;
+}
+
+.program:active {
+background-color: rgb(63, 224, 116);
+color: #fff;
+}
+
+.number:active {
+background-color: rgb(255, 181, 43);
+color: #fff;
+}
